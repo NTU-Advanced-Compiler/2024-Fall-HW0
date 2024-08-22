@@ -8,7 +8,7 @@ permissions:
   actions: read
   contents: read
 jobs:
-  run-autograding-tests:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,8 +36,8 @@ jobs:
           timeout: 5
           max-score: 1
 
-      - name: Install brili, bril2txt and bril2json
-        run: cd bril ; deno install brili.ts ; pip install flit ; cd bril-txt ; flit install --symlink
+      - name: install bril
+        run: bash install_bril.sh
 
       - name: Problem-1
         id: problem-1
