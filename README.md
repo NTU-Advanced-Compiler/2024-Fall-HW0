@@ -19,7 +19,7 @@ Bril is the intermediate representation (IR) we will be using throughout this co
 git clone --recursive <url-of-your-forked-repo>
 ```
 
-3. Familiarize yourself with the Bril project by reading the [Bril README](brilreadme).
+3. Familiarize yourself with the Bril project by reading the [Bril README](https://github.com/sampsyo/bril/blob/4029dd7b6440074bc4dd5557022848ef378f978a/README.md).
 
 # Assignment Task
 
