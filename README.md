@@ -8,12 +8,17 @@ Bril is the intermediate representation (IR) we will be using throughout this co
 
 # Getting Started
 
-1. Fork this repository
+1. Fork this repository:
 
 - Click the "Fork" button in the upper right corner.
 - Select your account as the destination for the fork.
 
-2. Clone your forked repository recursively to ensure you get the Bril submodule:
+2. Enable the workflows on your forked project:
+
+- Click the "Actions" button on your forked repository.
+- Click the "I understand my workflows, go ahead and enable them" button.
+
+3. Clone your forked repository recursively to ensure you get the Bril submodule:
 
 ```=sh
 git clone --recursive <url-of-your-forked-repo>
