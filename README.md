@@ -31,10 +31,18 @@ git clone --recursive <url-of-your-forked-repo>
 Your main task for this homework is to complete the TODO in the [install_bril.sh](install_bril.sh) script.
 This script is responsible for installing Bril during GitHub Actions, simulating the process you would follow on your local machine.
 
-# GitHub Actions
+# GitHub Actions and Autograding
 
-The .github directory contains workflows for testing the correctness of your [install_bril.sh](install_bril.sh) script.
-*Please do not modify any files in this directory*.
+The .github directory contains workflows for testing the correctness of your [install_bril.sh](install_bril.sh) script.  
+**Please do not modify any files in .github directory**.  
+  
+After you push your changes, GitHub Actions will automatically run tests on your submission. You can view your score and test results in two ways:
+1. **GitHub Actions Page**:
+- Go to the "Actions" tab in your GitHub repository.
+- Click on the latest workflow run.
+2. **Autograding Reporter**:
+- In the same workflow run page, look for the "Autograding Reporter" step.
+- The "Grand total tests passed" will show you how many of the test cases you've successfully completed.
 
 # Submission Guidelines
 
