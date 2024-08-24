@@ -2,47 +2,59 @@ Advanced Compiler Course - Homework 0
 =======
 
 # Introduction
-This homework assignment is designed to familiarize you with the Bril (Big Red Intermediate Language) project and set up your development environment. 
-
-Bril is the intermediate representation (IR) we will be using throughout this course.
+This initial homework is designed to introduce you to the Bril (Big Red Intermediate Language) project and to help you set up your development environment.  
+Bril is the intermediate representation (IR) that we will use extensively throughout this course.
 
 # Getting Started
 
-1. Fork this repository:
-
-- Click the "Fork" button in the upper right corner.
-- Select your account as the destination for the fork.
-
-2. Enable the workflows on your forked project:
-
-- Click the "Actions" button on your forked repository.
-- Click the "I understand my workflows, go ahead and enable them" button.
-
-3. Clone your forked repository recursively to ensure you get the Bril submodule:
+1. Clone your forked repository recursively to ensure you get the Bril submodule:
 
 ```=sh
 git clone --recursive <url-of-your-forked-repo>
 ```
 
-4. Familiarize yourself with the Bril project by reading the [Bril README](https://github.com/sampsyo/bril/blob/4029dd7b6440074bc4dd5557022848ef378f978a/README.md).
+2. Familiarize yourself with the Bril project by reading the [Bril README](https://github.com/sampsyo/bril/blob/4029dd7b6440074bc4dd5557022848ef378f978a/README.md).
 
 # Assignment Task
 
-Your main task for this homework is to complete the TODO in the [install_bril.sh](install_bril.sh) script.
-This script is responsible for installing Bril during GitHub Actions, simulating the process you would follow on your local machine.
+You need to complete the [install_bril.sh](install_bril.sh) script. This script will set up the Bril environment by installing necessary tools.
+
+Here's what the script needs to do:
+
+1. **Install Deno:** A modern runtime for JavaScript and TypeScript. This is used for the Bril interpreter.
+2. **Install Flit:** Simplifies the process of putting Python packages on PyPI, used for Python tools in the Bril project.
+3. **Install Bril Tools:**
+   - **bril2json**: Converts Bril programs from text to JSON format.
+   - **bril2txt**: Converts Bril programs from JSON back to text format.
+   - **brili**: The Bril interpreter, which executes code from its JSON format.
+
+The script should ensure these tools are installed and accessible in the user's PATH.
+
+Note: The script must work on any machine, not just yours. Ensure that the PATH modifications and installations are general enough to work on any system.
 
 # GitHub Actions and Autograding
 
-The .github directory contains workflows for testing the correctness of your [install_bril.sh](install_bril.sh) script.  
-**Please do not modify any files in .github directory**.  
+**Do not modify any files within the .github directory.**
   
-After you push your changes, GitHub Actions will automatically run tests on your submission. You can view your score and test results in two ways:
+Viewing Your Results:
 1. **GitHub Actions Page**:
 - Go to the "Actions" tab in your GitHub repository.
+  
+![action button](./images/action_button.png)
 - Click on the latest workflow run.
+
+![Latest Workflow](./images/latest_workflow.png)
+
 2. **Autograding Reporter**:
 - In the same workflow run page, look for the "Autograding Reporter" step.
+
+![Test yml](./images/test.png)
+
+![AutoGrader](./images/Autograder.png)
+
 - The "Grand total tests passed" will show you how many of the test cases you've successfully completed.
+
+![Grade](./images/Grades.png)
 
 # Submission Guidelines
 
@@ -55,6 +67,3 @@ git add install_bril.sh
 git commit -m "Completed Homework 0"
 git push origin main
 ```
-
-[gitsubm]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-[brilreadme]: https://github.com/sampsyo/bril/tree/4029dd7b6440074bc4dd5557022848ef378f978a

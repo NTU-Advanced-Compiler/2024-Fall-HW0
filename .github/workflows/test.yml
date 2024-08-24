@@ -15,10 +15,6 @@ jobs:
         with:
           submodules: true
 
-      - uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
-
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
@@ -36,8 +32,13 @@ jobs:
           timeout: 5
           max-score: 1
 
-      - name: install bril
-        run: bash install_bril.sh
+      - name: Install Bril
+        run: |
+          if timeout 10 bash install_bril.sh; then
+            echo "install_bril.sh completed successfully within 10 seconds."
+          else
+            echo "install_bril.sh takes more than 10 seconds, which exceeds the time limit."
+          fi
 
       - name: Problem-1
         id: problem-1
