@@ -21,8 +21,11 @@ You need to complete the [install_bril.sh](install_bril.sh) script. This script 
 
 Here's what the script needs to do:
 
-1. **Install Deno:** A modern runtime for JavaScript and TypeScript. This is used for the Bril interpreter.
-2. **Install Flit:** Simplifies the process of putting Python packages on PyPI, used for Python tools in the Bril project.
+1. **Install Deno: (This might already be available in your environment)** 
+   A modern runtime for JavaScript and TypeScript. This is used for the Bril interpreter.
+   Note: If Deno is missing in your environment, follow the instructions on [Deno](https://deno.com/) to install it.
+2. **Install Flit:**
+   Simplifies the process of putting Python packages on PyPI, used for Python tools in the Bril project.
 3. **Install Bril Tools:**
    - **bril2json**: Converts Bril programs from text to JSON format.
    - **bril2txt**: Converts Bril programs from JSON back to text format.
